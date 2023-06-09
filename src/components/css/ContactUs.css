@@ -1,0 +1,94 @@
+.contact-nav
+{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(86, 144, 243);
+    font-size: 25px;
+    padding: 8px 25px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    color: aliceblue;
+    text-align: left;
+    display: flex;
+}
+
+.contact-nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-primary{
+    margin-top: 20px;
+}
+
+.contact-form{
+    font-family: 'Rubik', sans-serif;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.contact-primary-heading{
+    color: rgb(86, 144, 243);;
+}
+
+.contact-form-heading{
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+
+.input{
+    font-family: 'Rubik', sans-serif;
+    margin: 5px 10px;
+    height: 50px;
+    width: 186px;
+    border-radius: 4px;
+    border: 1px solid #5690f3;
+    padding: 5px;
+}
+
+.contact-textarea{
+    font-family: 'Rubik', sans-serif;
+    height: 240px;
+    width: 597px;
+    margin-top: 20px;
+    resize: none;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #5690f3;
+}
+
+.contact-submit{
+    margin-top: 20px;
+}
+.contact-submit-button{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    width: 40%;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+    color: aliceblue;
+    margin: auto;
+    font-weight: bolder;
+    border: aliceblue;
+    border-radius: 8px;
+    background-color: #5690f3;
+}
+.error-message{
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}
+.contact-logo{
+    display: flex;
+    margin: 0px 515px;
+    color: black;
+}
+.contact-logo img{
+    width: 30px;
+    height: 30px;
+}
+.contact-home{
+    display: block;
+}
