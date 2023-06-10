@@ -36,7 +36,7 @@ const ContactUs=()=>{
             messageType:msgType,
             message:message
         }
-        let result=await fetch('http://127.0.0.1:5000/algovizzcontactdetails',{
+        let result=await fetch('https://edu-world-backend.vercel.app/algovizzcontactdetails',{
             method:"post",
             body:JSON.stringify({requestBody}),
             headers:{
