@@ -222,7 +222,7 @@
 
 #hiw2 {
     /* border: 2px solid rgb(0, 0, 0); */
-    width: 90%;
+    width: fit-content;
     margin: auto;
     height: 564px;
 }
@@ -241,7 +241,7 @@
 
 .wrapper {
     display: flex;
-    width: 90%;
+    width: fit-content;
     height: 200px;
     margin: auto;
 }
