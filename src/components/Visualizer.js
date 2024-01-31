@@ -45,14 +45,7 @@ const Visualizer=()=>{
     let copyArray=[];
 
     useEffect(()=>{
-        setArray([]);
-        console.log(arraySize)
-        for(let i=0;i<arraySize;i++)
-        {
-        //  array.push(Math.floor(Math.random() * 250) + 5);  
-        setArray((preArr)=>[...preArr,Math.floor(Math.random() * 250) + 5]);
-        }
-        console.log("heyyyyyy")
+        renderNewArray();
     },[arraySize]);
     
     useEffect(() => {
@@ -65,8 +58,8 @@ const Visualizer=()=>{
         console.log(arraySize)
         for(let i=0;i<arraySize;i++)
         {
-        //  array.push(Math.floor(Math.random() * 250) + 5);  
-        setArray((preArr)=>[...preArr,Math.floor(Math.random() * 250) + 5]);
+            //  array.push(Math.floor(Math.random() * 250) + 5);  
+            setArray((preArr)=>[...preArr,Math.floor(Math.random() * 250) + 5]);
         }
     }
 
@@ -150,12 +143,12 @@ const Visualizer=()=>{
    return( <section id="visualizer">
    {/* {console.log("rerendering done here visss")} */}
         <div id="headdiv">
-        
             <div id="vis">
                 <p>Visualizer</p>
                 <div></div>
             </div>
         </div>
+
         <div className="v1">
             <div className="buttonbox">
                 <button type="button" className="btn bubbleSort" onClick={handleBubble}>Bubble Sort</button>
@@ -164,9 +157,7 @@ const Visualizer=()=>{
                 <button type="button" className="btn quickSort" onClick={handleQuick} >Quick Sort</button>
                 <button type="button" className="btn mergeSort" onClick={handleMerge}>Merge Sort</button>
             </div>
-            
-                <BarsBox key={BarsBoxRerenderkey} BarSizeArray={array}/>
-        
+        <BarsBox key={BarsBoxRerenderkey} BarSizeArray={array}/>    
         </div>
     
         <div className="legendsection">
@@ -175,7 +166,6 @@ const Visualizer=()=>{
                     Legends
                 </p>
             </div>
-
         </div>
 
         <div className="v2">

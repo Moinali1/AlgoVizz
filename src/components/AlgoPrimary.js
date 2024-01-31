@@ -25,7 +25,7 @@ const Codezone=(props)=>{
 const Details=(props)=>{
     return(
         <div>
-             <header>How {props.details.name} Sort works</header>
+            <header>How {props.details.name} Sort works</header>
             <p className="content">{props.details.description}</p>
             <header>Performence</header>
             <div className="complexity">

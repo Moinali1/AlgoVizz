@@ -15,7 +15,6 @@ const Nav=()=>{
         navbar.classList.remove('nav-active');
         mono.classList.remove('logo-active');
     }
-    // console.log("a");
 };},[])
 
     return(
