@@ -14,7 +14,7 @@ return(
         <MainPrimary />
         <MainRecommendation />
         <HowItWorks />
-        <Visualizer />
+        {/* <Visualizer /> */}
         <Footer />
     </div>
 )
