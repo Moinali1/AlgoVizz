@@ -4,8 +4,10 @@ import Nav from './Nav.js';
 import MainPrimary from "./MainPrimary";
 import MainRecommendation from "./MainRecommendation";
 import HowItWorks from "./HowItWorks";
-import Visualizer from "./Visualizer";
 import Footer from "./Footer";
+import SortVisualizer from "./SortVisualizer.js";
+import SelectVisualizer from "./SelectVisualizer.js";
+
 
 const Main=()=>{
 return(
@@ -14,7 +16,8 @@ return(
         <MainPrimary />
         <MainRecommendation />
         <HowItWorks />
-        {/* <Visualizer /> */}
+        <SelectVisualizer/>
+        {/* <SortVisualizer /> */}
         <Footer />
     </div>
 )

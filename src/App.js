@@ -3,6 +3,7 @@ import Main from './components/Main'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import AlgoCode from './components/AlgoCode';
 import ContactUs from './components/ContactUs';
+import VisualizerPage from './components/VisualizerPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
      <Route path='/algocodequick' element={<AlgoCode render="quick"/> }/>
      <Route path='/algocodemerge' element={<AlgoCode render="merge"/> }/>
      <Route path='/contactUs' element={<ContactUs />}/>
+     <Route path='/VisualizerPage' element={<VisualizerPage />}/>
      </Routes>
      </BrowserRouter>
 

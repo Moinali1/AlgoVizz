@@ -16,9 +16,11 @@ const BarsBox=(props)=>{
                         <div>
                         <div 
                             key={index}
-                            style={{height :`${value*1.2}px`}}
+                            style={{height :`${value*1.2}px`,fontSize : '14px'}}
                             className={`bar flex-item barNo${index}`}      
-                        ></div>
+                        >
+                        {Math.round(value*1.2)}
+                        </div>
                         </div>
                     ))
                 }
@@ -28,7 +30,7 @@ const BarsBox=(props)=>{
 }
 
 
-const Visualizer=()=>{
+const SortVisualizer=()=>{
 
     const[arraySize,setArraySize]=useState(27);
     const [BarsBoxRerenderkey, setKey] = useState(0);
@@ -51,6 +53,8 @@ const Visualizer=()=>{
     useEffect(() => {
         copyArray=[...array];
       }, [array]);
+    
+
 
     function renderNewArray()
     {
@@ -59,7 +63,7 @@ const Visualizer=()=>{
         for(let i=0;i<arraySize;i++)
         {
             //  array.push(Math.floor(Math.random() * 250) + 5);  
-            setArray((preArr)=>[...preArr,Math.floor(Math.random() * 250) + 5]);
+            setArray((preArr)=>[...preArr,Math.floor(Math.random() * 250) + 15]);
         }
     }
 
@@ -134,17 +138,45 @@ const Visualizer=()=>{
         enableNewArrayBtn();
         deletelegends();
         const legends = document.querySelector(".legends");
-        legends.innerHTML = "<div className='legHeading'>Legends</div>";
+        legends.innerHTML = "<p class='legHeading'>Legends</p>";
         const newArray = [...copyArray]; // Create a new copy of the array
         setArray(newArray);
         setKey((prevKey) => prevKey + 1);
       }
 
-   return( <section id="visualizer">
+  const [min, setMin] = useState(4);
+  const [max, setMax] = useState(30);
+
+  useEffect(() => {
+    const updateRangeSlider = () => {
+      if (window.matchMedia("(max-width: 1320px)").matches) {
+        setArraySize(9);
+        setMin(4);
+        setMax(10);
+      } else {
+        setMin(5);
+        setMax(30);
+        setArraySize(27);
+      }
+    };
+
+    // Run on initial render
+    updateRangeSlider();
+
+    // Add event listener to handle resize
+    window.addEventListener('resize', updateRangeSlider);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', updateRangeSlider);
+  }, []);
+
+
+
+   return( <section id="SortVisualizer">
    {/* {console.log("rerendering done here visss")} */}
         <div id="headdiv">
             <div id="vis">
-                <p>Visualizer</p>
+                <p>Sort Visualizer</p>
                 <div></div>
             </div>
         </div>
@@ -172,7 +204,7 @@ const Visualizer=()=>{
             <div className="v22">
                 <div className="d1 d" id="input">
                     <div className="sizeHead">Size :</div>
-                    <input id="arr_sz" className="range-slider" type="range" min={5} max={33} step={1} value={arraySize} onChange={(e)=>{setArraySize(e.target.value)}} />
+                    <input id="arr_sz" className="range-slider" type="range" min={min} max={max} step={1} value={arraySize} onChange={(e)=>{setArraySize(e.target.value)}} />
                 </div>
                 <div className="d2 d" id="newArray">
                     <button type="button" className="btn newArray" onClick={renderNewArray}>New Array</button>
@@ -191,4 +223,4 @@ const Visualizer=()=>{
    )
 }
 
-export default Visualizer;
+export default SortVisualizer;

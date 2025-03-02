@@ -27,7 +27,7 @@ const Nav=()=>{
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#howitworks">How It Works</a></li>
-                <li><a href="#visualizer">Visualizer</a></li>
+                <li><a href="#visualizersection">Visualizer</a></li>
                 <li><a href="#recommend">Complexity</a></li>
                 <li><Link to="/contactus">Contact Us</Link></li>
             </ul>

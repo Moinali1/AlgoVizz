@@ -40,9 +40,18 @@ function enableSortingBtn(){
 function swap(el1, el2) {
     console.log('In swap()');
     
-    let temp = el1.style.height;
+    // previous without numbers
+    // let temp = el1.style.height;
+    // el1.style.height = el2.style.height;
+    // el2.style.height = temp;
+
+    // new code with numbers
+    let temp = parseFloat(el1.style.height); // Parse the height as a float
     el1.style.height = el2.style.height;
-    el2.style.height = temp;
+    el1.innerHTML = Math.round(parseFloat(el2.style.height)); // Parse and round the height
+    el2.style.height = temp + 'px'; // Assigning the height back with the unit
+    el2.innerHTML = Math.round(temp); // Rounding the parsed value
+
     
 }
 
@@ -88,5 +97,4 @@ let delay = 100;
 
 
 
-
-   export {swap,deletelegends,waitforme,delay,disableSizeSlider,disableSortingBtn,disableNewArrayBtn,enableNewArrayBtn,enableSortingBtn,enableSizeSlider,createLegends}; 
+export {swap,deletelegends,waitforme,delay,disableSizeSlider,disableSortingBtn,disableNewArrayBtn,enableNewArrayBtn,enableSortingBtn,enableSizeSlider,createLegends}; 

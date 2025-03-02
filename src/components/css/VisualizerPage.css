@@ -1,8 +1,8 @@
-.contact-nav
+.VP-nav
 {
     height: 50px;
     width: 100%;
-    background-color: rgb(86, 144, 243);
+    background-color: #266ca2;
     font-size: 25px;
     padding: 8px 25px;
     font-weight: bold;
@@ -12,41 +12,26 @@
     display: flex;
 }
 
-
-
-.contact-nav a{
+.VP-nav a{
     text-decoration: none;
     color: inherit;
 }
 
-.contact-primary{
+.VP-primary{
     margin-top: 20px;
 }
 
-@media (max-width: 1320px) {
-    .contact-textarea {
-        height: 100px !important;
-        width: 185px !important;
-        margin: 11px !important;
-    }
-    
-}
-
-.contact-form{
+.VP-form{
     font-family: 'Rubik', sans-serif;
     width: 50%;
     margin: 20px auto;
 }
 
-.contact-form-primary{
-    display: block;
-}
-
-.contact-primary-heading{
+.VP-primary-heading{
     color: rgb(86, 144, 243);;
 }
 
-.contact-form-heading{
+.VP-form-heading{
     margin: 10px 0px;
     font-size: 15px;
 }
@@ -62,7 +47,7 @@
     padding: 5px;
 }
 
-.contact-textarea{
+.VP-textarea{
     font-family: 'Rubik', sans-serif;
     height: 240px;
     width: 597px;
@@ -73,10 +58,10 @@
     border: 1px solid #5690f3;
 }
 
-.contact-submit{
+.VP-submit{
     margin-top: 20px;
 }
-.contact-submit-button{
+.VP-submit-button{
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     width: 40%;
@@ -95,15 +80,17 @@
     color: red;
     text-align: center;
 }
-.contact-logo{
+.VP-logo{
     display: flex;
     margin: auto;
     color: black;
+    text-shadow: aliceblue 2px 2px 10px;
+
 }
-.contact-logo img{
+.VP-logo img{
     width: 30px;
     height: 30px;
 }
-.contact-home{
+.VP-home{
     display: block;
 }
